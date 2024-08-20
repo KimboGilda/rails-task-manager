@@ -17,5 +17,10 @@ Rails.application.routes.draw do
   get "/tasks/:id", to: "tasks#show", as: :task
 
   # edit a task
-  # 1.
+  # 1. get the specific task we want to edit
+  get "/tasks/:id/edit", to: "tasks#edit", as: :task_edit
+
+  # 2. update the task and send it to the server
+  patch "tasks/:id", to: "tasks#update"
+
 end
