@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   post "/tasks", to: "tasks#create"
   # click on a task and go to a specific page of a task
   get "/tasks/:id", to: "tasks#show", as: :task
+
+  # edit a task
+  # 1.
 end
