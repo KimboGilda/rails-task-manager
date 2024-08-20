@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   # root "posts#index"
   # add a new task
   get "/tasks", to: "tasks#index"
+  
+  # create a task
+  # 1. create a form to add the new task
+  get "/tasks/new", to: "tasks#new"
+  # 2. POST the parameters to create a new task
+  post "/tasks", to: "tasks#create"
   # click on a task and go to a specific page of a task
   get "/tasks/:id", to: "tasks#show", as: :task
 end
