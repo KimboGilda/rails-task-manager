@@ -23,4 +23,8 @@ Rails.application.routes.draw do
   # 2. update the task and send it to the server
   patch "tasks/:id", to: "tasks#update"
 
+  # delete a task
+  delete "tasks/:id", to: "tasks#destroy", as: :task_delete
+
+
 end

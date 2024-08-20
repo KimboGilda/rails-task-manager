@@ -3,3 +3,7 @@
 <%= link_to "Back to list", "/tasks" %>
 <%= link_to "Edit the task", task_edit_path %>
 
+<%= link_to "Delete", task_delete_path,
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
